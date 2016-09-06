@@ -10,7 +10,7 @@ tags:
 
 {% include base_path %}
 
-## Overview
+# Overview
 
 [Sia](https://sia.tech/) is a decentralized, peer-to-peer network for buying and
 selling storage space. To participate in the Sia network, the user needs to keep
@@ -39,22 +39,22 @@ the steps relating to Docker should be applicable on any platform that supports
 Docker. I successfully tested this on a Synology DS412+, but these steps should
 work on any Synology NAS with the latest DSM and sufficient CPU/RAM.
 
-## Configuring the NAS
+# Configuring the NAS
 
 Before we start running Sia, we'll need to get things set up on our Synology
 NAS.
 
-### Install Docker
+## Install Docker
 
 First, we need to install Docker.
 
-Docker is one of the few Synology-published, 
-official packages available for DSM. You can find it in Package Center by
-searching for `docker` and clicking "Install."
+Docker is one of the few Synology-published, official packages available for
+DSM. You can find it in Package Center by searching for `docker` and clicking
+"Install."
 
 ![Install Docker package]({{ base_path }}/images/2016-05-30-sia-via-docker/package-docker.png)
 
-### Create Sia Directory
+## Create Sia Directory
 
 Next, we'll create a dedicated Shared Folder for Sia. This is the folder where
 Sia will store all of its state information (including encrypted wallet files
@@ -64,7 +64,7 @@ From File Station, create a New Shared folder and name it "sia":
 
 ![Create new shared folder]({{ base_path }}/images/2016-05-30-sia-via-docker/new-shared-folder.png)
 
-### Enable SSH access to Diskstation
+## Enable SSH access to Diskstation
 
 Because the DSM Docker app does not support creation of images from a
 `Dockerfile`, we'll need to do this through the command line. To support this,
@@ -73,14 +73,14 @@ checked.
 
 ![Install Docker package]({{ base_path }}/images/2016-05-30-sia-via-docker/enable-ssh.png)
 
-## Creating the Docker image
+# Creating the Docker image
 
 We're now ready to create the Sia Docker image!
 
 To begin, we'll SSH into our NAS from another machine on the network. Linux and OS X users can run the following command from the terminal. Windows users will need an SSH client, such as [Cygwin](https://www.cygwin.com).
 
 ```bash
-$ ssh admin@diskstation
+ssh admin@diskstation
 ```
 
 *Note: The rest of the commands in this section assume that you are running as
@@ -90,7 +90,9 @@ Now that we have a shell on the NAS, switch to the `/tmp/` directory:
 
 ```bash
 admin@DiskStation:/$ cd /tmp
+
 admin@DiskStation:/tmp/$
+
 ```
 
 Now, using a text editor (`vim` is built-in to DSM, so I use that), create a
@@ -118,7 +120,7 @@ This `Dockerfile` does a few things:
   that we created earlier so that the files `siad` generates are visible on the
   NAS.
 * Exposes all Sia ports (`9980`-`9982`) so that they are accessible outside the
-  Docker container. 
+  Docker container.
 
 With our `Dockerfile` complete, we are ready to build and run the container:
 
@@ -127,7 +129,7 @@ With our `Dockerfile` complete, we are ready to build and run the container:
 admin@DiskStation:/tmp/$ sudo docker build -t sia .
 
 # Create a Docker container based on our sia image and start running it in the
-# background. 
+# background.
 # NOTE: Replace 10.0.0.101 with the IP address of your Synology NAS on your
 # local network.
 admin@DiskStation:/tmp/$ sudo docker run \
@@ -157,7 +159,7 @@ The previous commands do the following:
     address with the command `dig diskstation +short` from another machine on
     your local network.
 
-### Checking for success
+## Checking for success
 
 From DSM, open the Docker app and open the "Container" panel.
 
@@ -170,9 +172,9 @@ created several folders:
 
 ![Sia generated folders]({{ base_path }}/images/2016-05-30-sia-via-docker/sia-folder-populated.png)
 
-## Managing Sia with `siac`
+# Managing Sia with `siac`
 
-### Checking status
+## Checking status
 
 Now let's connect to our Sia daemon using the command-line client, `siac`.
 
@@ -193,7 +195,7 @@ Height: 727
 Target: [0 0 0 0 12 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204 204]
 ```
 
-### Configuring a host storage folder
+## Configuring a host storage folder
 
 If we would like to use Sia to host files for other users, we can create a
 subdirectory for that in our "sia" shared folder:
@@ -203,13 +205,13 @@ subdirectory for that in our "sia" shared folder:
 Then we can use `siac` to add that folder as a new Sia host storage folder:
 
 ```bash
-$ ./siac --addr DISKSTATION:9980 host folder add /mnt/sia/host-storage 500GB
+./siac --addr DISKSTATION:9980 host folder add /mnt/sia/host-storage 500GB
 ```
 
 Note that `/mnt/sia/host-storage` is the path from the *daemon's* perspective
 (from within the Docker container), not the perspective of `siac`.
 
-## Allow Sia through firewall
+# Allow Sia through firewall
 
 Sia needs to communicate with remote peers over ports `9981` and `9982`, so if
 we're using a home router, we'll need to configure it to forward those ports
@@ -224,7 +226,7 @@ We deliberately do **not** expose port `9980` because that is Sia's port for
 API communications. Exposing it to the public Internet would leave our Sia peer
 vulnerable to compromise.
 
-### (Optional) Persisting Sia running state across reboots
+## (Optional) Persisting Sia running state across reboots
 
 While a Synology NAS can stay up for weeks to months, it is sometimes
 necessary to reboot the system. This is a pain because every time we restart the
@@ -255,7 +257,7 @@ admin@DiskStation:/$ sudo docker unpause sia-container
 After unpausing, Sia will pick up where it left off with no need for manually
 re-entering the wallet password.
 
-## Conclusion
+# Conclusion
 
 We now have a working Sia node that stays online as long as our NAS is up and
 running. By using Docker's `PAUSE` functionality, we can eliminate the need to
@@ -265,17 +267,17 @@ Because we configured Sia to keep all persistent state outside of the container,
 it will be very easy for us to modify our `Dockerfile` to upgrade Sia as new
 releases are published.
 
-## Further Reading
+# Further Reading
 
 The official Sia blog just published a post about setting up Sia to be a storage
 host:
 
- * [How to Run a Host on Sia](http://blog.sia.tech/2016/05/26/how-to-run-a-host-on-sia/) 
+* [How to Run a Host on Sia](http://blog.sia.tech/2016/05/26/how-to-run-a-host-on-sia/)
 
 Check that guide out for an in-depth walkthrough of configuring the Sia host we
 just set up.
 
-## Updates
+# Updates
 
 * 2016-05-30: Original publication.
 * 2016-07-08: Updated instructions for the Sia 1.0.0 release.
