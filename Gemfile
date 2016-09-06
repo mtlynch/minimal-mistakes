@@ -1,8 +1,14 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+require 'json'
+require 'open-uri'
+versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+
+gem 'github-pages', versions['github-pages'], group: :jekyll_plugins
 
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem 'html-proofer', '3.0.6'
+gem 'mdl', '0.3.1'
 
 group :jekyll_plugins do
   # gem "jekyll-archives"
