@@ -1,4 +1,4 @@
-Gemfile.lock
+Gemfile.*lock
 *.sublime-project
 *.sublime-workspace
 .DS_Store
