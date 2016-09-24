@@ -15,7 +15,7 @@ Ansible is an excellent tool for deploying web applications. We can use Ansible 
 
 In [our last post](/ansible-role-clipbucket/), we used Ansible to deploy a web app called [ClipBucket](http://www.clipbucket.com/), a video-hosting web app. In that post, we included automated tests to verify that the web app installed correctly, but these tests did not exercise application functionality very rigorously.
 
-In this post, we'll demonstrate stronger automated tests that exercise the web app functionality more deeply. To help with this, we'll be using a web browser automation tool called Selenium. We'll continue using the ClipBucket role here, but the ideas should apply generally to any web app we deploy with Ansible. 
+In this post, we'll demonstrate stronger automated tests that exercise the web app functionality more deeply. To help with this, we'll be using a web browser automation tool called Selenium. We'll continue using the ClipBucket role here, but the ideas should apply generally to any web app we deploy with Ansible.
 
 # Basic Testing with `curl`
 
@@ -149,7 +149,7 @@ Checking the installed modules page is a bit different. We don't need to interac
 
 This is tricky because none of the elements we're interested in (or their parent elements in the DOM) have `id` attributes. They are all `<div>`s with `class="well"`, so that's the best option we have for finding each of the module information boxes.
 
-After we find the boxes, we need to determine whether the box indicates a successful module install or a problem. We can do this by either looking for indicators of success or verifying that the elements lack indicators of failure. The former is a bit more rigorous, but the latter is simpler to code. Boxes with error messages always contain an element with `class="alert"` attribute, so we can identify successful boxes if they do not have any child elements with this class. 
+After we find the boxes, we need to determine whether the box indicates a successful module install or a problem. We can do this by either looking for indicators of success or verifying that the elements lack indicators of failure. The former is a bit more rigorous, but the latter is simpler to code. Boxes with error messages always contain an element with `class="alert"` attribute, so we can identify successful boxes if they do not have any child elements with this class.
 
 [![ClipBucket module error]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-module-error.png)]({{ base_path }}/images/2016-09-25-testing-ansible-selenium/clipbucket-module-error.png)
 
