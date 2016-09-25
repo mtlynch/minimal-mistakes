@@ -11,11 +11,11 @@ tags:
 
 # Overview
 
-Ansible is an excellent tool for deploying web applications. We can use Ansible to define the different roles that compose a web app. But as our roles and the interactions between them become more complex, we need appropriately stronger ways of testing our roles to verify that our roles are deploying our web app correctly.
+Ansible is an excellent tool for deploying web apps. Ansible allows us to define web apps in terms of the different "roles" that compose our web app (e.g. web server, database server, application server). As our roles and the interactions between them become more complex, we need appropriately stronger ways of testing our roles to verify we're deploying our web app correctly.
 
 In [our last post](/ansible-role-clipbucket/), we used Ansible to deploy a web app called [ClipBucket](http://www.clipbucket.com/), a video-hosting web app. In that post, we included automated tests to verify that the web app installed correctly, but these tests did not exercise application functionality very rigorously.
 
-In this post, we'll demonstrate stronger automated tests that exercise the web app functionality more deeply. To help with this, we'll be using a web browser automation tool called Selenium. We'll continue using the ClipBucket role here, but the ideas should apply generally to any web app we deploy with Ansible.
+In this post, we'll demonstrate stronger automated tests that exercise the app's functionality more deeply. To help with this, we'll be using a web browser automation tool called Selenium. We'll continue using the ClipBucket role here, but the ideas should apply generally to any web app we deploy with Ansible.
 
 # Basic Testing with `curl`
 
@@ -76,7 +76,7 @@ Because we deleted the task in our playbook that creates a symlink to ffmpeg, Cl
 
 We'd like to create an automated test for this, but uploading a video is difficult to script with simple command-line tools. The user first has to log in (which means that the script needs to manage cookies across requests), then they have to navigate the web UI to upload a video. This would be very difficult to do in a series of `curl` commands.
 
-Fortunately, we can use [Selenium](http://docs.seleniumhq.org/). Selenium is a tool that allows applications to perform web browser actions programmatically.
+Fortunately, we can use [Selenium](http://docs.seleniumhq.org/). Selenium is a web testing tool that allows us to perform web browser actions programmatically.
 
 # Setting Up Selenium
 
