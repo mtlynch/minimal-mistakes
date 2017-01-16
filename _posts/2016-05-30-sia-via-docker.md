@@ -31,7 +31,7 @@ in which we can run Sia with all of its dependencies.
 The components we are using in this guide are:
 
 * Synology DSM 6.0-7321 Update 7
-* Sia v.1.0.0
+* Sia v.1.0.4
 * Docker v.1.9.1
 
 Though this guide is written specifically for Docker on the Synology DSM system,
@@ -100,11 +100,18 @@ text file named `Dockerfile` with the following contents:
 
 {% gist mtlynch/54d71bff4c33270c1cd6c0ddf0218558 %}
 
+Or just download my `Dockerfile` with this command:
+
+```bash
+wget \
+  https://gist.githubusercontent.com/mtlynch/54d71bff4c33270c1cd6c0ddf0218558/raw/1c5e44f90606338d16a6398aca7f5b56a6fc3e6f/Dockerfile
+```
+
 This `Dockerfile` does a few things:
 
 * Creates a Docker image from the golang base image so that the latest stable
   version of Go is available within the container.
-* Downloads Sia v.1.0.0 (the latest stable release as of this writing) and
+* Downloads Sia v.1.0.4 (the latest stable release as of this writing) and
   installs it to the `/opt/sia` directory.
 * Configures the image to run `siad`, the Sia daemon process, when the container
   starts up.
@@ -115,6 +122,7 @@ This `Dockerfile` does a few things:
   * The `--disable-api-security` tells `siad` that we have explicitly chosen to
     listen to Sia API calls from outside of localhost, which is a security risk.
     We handle mitigations for this risk in the subsequent steps of this guide.
+  * Frustratingly, adding `--disable-api-security` causes `siad` to require a password for all sensitive API calls, so we're setting the password to `"a"`. I've [filed a bug](https://github.com/NebulousLabs/Sia/issues/1386) on this and [written a fix](https://github.com/NebulousLabs/Sia/issues/1387) but the Sia developers seem unwilling to change this behavior.
 * Instructs `siad` to use `/mnt/sia` as its folder for Sia state information.
   In the next step, we'll link `/mnt/sia` to the Synology Shared Folder "sia"
   that we created earlier so that the files `siad` generates are visible on the
@@ -206,6 +214,7 @@ Then we can use `siac` to add that folder as a new Sia host storage folder:
 
 ```bash
 ./siac --addr DISKSTATION:9980 host folder add /mnt/sia/host-storage 500GB
+# When prompted for a password, enter: a
 ```
 
 Note that `/mnt/sia/host-storage` is the path from the *daemon's* perspective
@@ -231,7 +240,7 @@ vulnerable to compromise.
 While a Synology NAS can stay up for weeks to months, it is sometimes
 necessary to reboot the system. This is a pain because every time we restart the
 Sia daemon process, we need to re-enter the wallet password for Sia. Unlocking
-the wallet is currently a slow process, as acknowledged in the [latest
+the wallet is currently a [slow process](https://github.com/NebulousLabs/Sia/issues/1465), as acknowledged in the [latest
 post](http://blog.sia.tech/2016/05/26/how-to-run-a-host-on-sia/) to the Sia
 development blog:
 
@@ -281,3 +290,4 @@ just set up.
 
 * 2016-05-30: Original publication.
 * 2016-07-08: Updated instructions for the Sia 1.0.0 release.
+* 2017-01-15: Updated instructions for the Sia 1.0.4 release.
