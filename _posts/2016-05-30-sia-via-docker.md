@@ -241,7 +241,7 @@ While a Synology NAS can stay up for weeks to months, it is sometimes
 necessary to reboot the system. This is a pain because every time we restart the
 Sia daemon process, we need to re-enter the wallet password for Sia. Unlocking
 the wallet is currently a [slow process](https://github.com/NebulousLabs/Sia/issues/1465), as acknowledged in the [latest
-post](http://blog.sia.tech/2016/05/26/how-to-run-a-host-on-sia/) to the Sia
+post](https://blog.sia.tech/how-to-run-a-host-on-sia-2159ebc4725) to the Sia
 development blog:
 
 > In v0.6.0, unlocking the wallet can take 10 or 20 minutes. Instant wallet
