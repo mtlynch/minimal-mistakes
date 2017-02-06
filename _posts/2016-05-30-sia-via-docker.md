@@ -281,7 +281,7 @@ releases are published.
 The official Sia blog just published a post about setting up Sia to be a storage
 host:
 
-* [How to Run a Host on Sia](http://blog.sia.tech/2016/05/26/how-to-run-a-host-on-sia/)
+* [How to Run a Host on Sia](https://blog.sia.tech/how-to-run-a-host-on-sia-2159ebc4725)
 
 Check that guide out for an in-depth walkthrough of configuring the Sia host we
 just set up.
