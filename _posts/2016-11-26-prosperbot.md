@@ -1,12 +1,13 @@
 ---
-title: "Automated Prosper Investing with ProsperBot"
-excerpt: "An automated peer to peer lending bot"
+title: Automated Prosper Investing with ProsperBot
+date: 2016-11-26 00:00:00 -05:00
 tags:
-  - prosper
-  - lending
-  - p2p
-  - go
-  - golang
+- prosper
+- lending
+- p2p
+- go
+- golang
+excerpt: An automated peer to peer lending bot
 ---
 
 {% include base_path %}

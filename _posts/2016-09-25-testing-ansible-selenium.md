@@ -1,10 +1,11 @@
 ---
-title: "Testing Ansible Web App Roles with Selenium"
-excerpt: "A way to perform strong tests on Ansible web app roles"
+title: Testing Ansible Web App Roles with Selenium
+date: 2016-09-25 00:00:00 -04:00
 tags:
-  - ansible
-  - clipbucket
-  - docker
+- ansible
+- clipbucket
+- docker
+excerpt: A way to perform strong tests on Ansible web app roles
 ---
 
 {% include base_path %}

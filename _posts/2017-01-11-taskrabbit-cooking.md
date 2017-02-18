@@ -1,10 +1,11 @@
 ---
-title: "Adventures in Outsourcing: Cooking with TaskRabbit"
-excerpt: "Hiring a personal chef on the cheap"
+title: 'Adventures in Outsourcing: Cooking with TaskRabbit'
+date: 2017-01-11 00:00:00 -05:00
 tags:
-  - outsourcing
-  - cooking
-  - taskrabbit
+- outsourcing
+- cooking
+- taskrabbit
+excerpt: Hiring a personal chef on the cheap
 ---
 
 {% include base_path %}

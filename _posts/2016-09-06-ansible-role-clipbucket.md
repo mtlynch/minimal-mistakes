@@ -1,10 +1,11 @@
 ---
-title: "Automatically Deploying ClipBucket with Ansible"
-excerpt: "An Ansible role love story"
+title: Automatically Deploying ClipBucket with Ansible
+date: 2016-09-06 00:00:00 -04:00
 tags:
-  - ansible
-  - clipbucket
-  - docker
+- ansible
+- clipbucket
+- docker
+excerpt: An Ansible role love story
 ---
 
 {% include base_path %}
