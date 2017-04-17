@@ -12,7 +12,7 @@ if [ "$1" = "--quick" ]; then
 fi
 
 # Run HTMLProofer
-BUNDLE_GEMFILE=Gemfile.dev bundle exec jekyll build \
+BUNDLE_GEMFILE=Gemfile bundle exec jekyll build \
   --config _config.yml,_config_dev.yml
 bundle exec htmlproofer ./_site \
   --only-4xx \
