@@ -37,8 +37,9 @@ The components we are using in this guide are:
 
 Though this guide is written specifically for Docker on the Synology DSM system,
 the steps relating to Docker should be applicable on any platform that supports
-Docker. I successfully tested this on a Synology DS412+, but these steps should
-work on any Synology NAS with the latest DSM and sufficient CPU/RAM.
+Docker. I successfully tested this on a [Synology DS412+](http://amzn.to/2pf3unf),
+but these steps should work on any Synology NAS with the latest DSM and
+sufficient CPU/RAM.
 
 # Configuring the NAS
 
