@@ -56,11 +56,11 @@ I live in a pretty small 1 BR apartment in Manhattan, so physical space is at a 
 ## Case
 
 
-
 ## Final Parts List
 
 | Category | Component |  Price |
 |------|-------|
+<<<<<<< HEAD
 | CPU | [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI) | $323.66 |
 | Motherboard | [ASRock AB350M-HDV](https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765) | $69.99 |
 | Disk | [Samsung 850 EVO - 250GB](http://amzn.to/2pyfArr) | $99.99 |
@@ -97,3 +97,10 @@ Dual LGA 2011 motherboards start at at ~$300, so even if I found a couple used I
 
 <br>
 *Disclosure: This post uses affiliate links to reference some products mentioned in the post. This allows the blog to receive commission when readers make purchases through these links.*
+=======
+| CPU | [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI) | $319.99 |
+| Motherboard | [ASRock AB350M-HDV AM4 AMD Promontory B350](https://www.newegg.com/Product/Product.aspx?Item=N82E16813157765) | $69.99 |
+| Disk | [Samsung 850 EVO - 250GB](http://amzn.to/2pyfArr) | $113.00 |
+| RAM | [Corsair LPX 32GB (2x16GB) 3200MHz C16 DDR4](http://amzn.to/2pytLg3) | $324.99 |
+| PSU | [FSP Group Mini ITX Solution / Flex ATX 220W 80 PLUS Certified Active PFC Power Supply](http://amzn.to/2o1iWU9) | $52.99 |
+| Case | [Fractal Design Node 804 No Power Supply MicroATX Cube](http://amzn.to/2oTr0FE) | $109.99 |
