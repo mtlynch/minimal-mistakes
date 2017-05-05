@@ -101,17 +101,17 @@ For the hypervisor, I used KVM. The biggest weakness is that compared to ESXi
 
 ## Also ran: ESXi 6.5
 
-TODO: Talk about how it's free.
+I actually went into this project planning to use [VMware vSphere Hypervisor](https://www.vmware.com/products/vsphere-hypervisor.html), VMware's free hypervisor offering. It seemed like a much more mature product with a larger user base (so presumably easier to find support). However, it ended up being incompatible with both my motherboard's NIC and the Ryzen CPU. I was finally able to run it after I installed the Broadcom NIC and disabled my CPU's SMT in BIOS, but by that point, I'd been using Kimchi for a few days and gotten used to it.
 
-I actually went into this project planning to use [VMware vSphere Hypervisor](https://www.vmware.com/products/vsphere-hypervisor.html). It seemed like a much more mature product with a larger user base (so presumably easier to find support). However, it ended up being incompatible with both my motherboard's NIC and the Ryzen CPU. I was finally able to run it after I installed the Broadcom NIC and disabled my CPU's SMT in BIOS, but by that point, I'd been using Kimchi for a few days and gotten used to it.
+vSphere didn't seem to offer a significantly better experience than Kimchi. The UI is much more slick, but it also had very klunky flows where one mistake would force you to completely restart a whole multi-stage process from scratch. It also wasn't obvious how to access the shell to just do what I want on the command-line (I'm sure it's possible, but I didn't investigate long enough for the answer).
 
-vSphere didn't seem to offer a significantly better experience than Kimchi. The UI is much prettier, but it also had very klunky flows where one mistake would force you to completely restart a whole multi-stage process from scratch. It also wasn't obvious how to access the shell to just do what I want on the command-line (I'm sure it's possible, but I didn't investigate long enough for the answer). The dealbreaker for me was that it prominently displayed a warning saying that the software would stop working in 60 days unless I entered a VMware registration key. I believe VMware will provide this for free, but I didn't want to bother with registration keys when Kimchi is available open source with similar functionality.
+The dealbreaker for me was that on login, vSphere prominently displayed a warning saying that the software would stop working in 60 days unless I entered a VMware registration key. VMware provides a license key for free, but I didn't want to bother with registration keys when Kimchi isn't tied to any kind of licensing checks and provides an experience that's about equal to vSphere.
 
 # Reviewing My Choices
 
 ## CPU
 
-My most questionable choice is the CPU. It does run very fast, but it may have also been overkill as I haven't seen total CPU usage rise above 35%, even when I've got five VMs running with  CPU-intensive jobs running on several of them.
+My most questionable choice is the CPU. It does run very fast, but it may have also been overkill, as I haven't seen total CPU usage rise above 35%, even when I've got five VMs running with  CPU-intensive jobs running on several of them.
 
 The downside to the Ryzen is that it's very bleeding edge right now and compatibility is shaky. I tried installing Fedora 25 server, Debian 8.7, Centos 7, and ESXi 6.5 and they all died during the installation because they weren't compatible with the Ryzen. I was able to install some of these successfully if I disabled SMT (multithreading) for the CPU in BIOS, but that reduces it to an from a 16-core to an 8-core CPU, which felt sad. The only OS that installed successfully was Ubuntu (successfully installed both 16.04 and 17.04).
 
