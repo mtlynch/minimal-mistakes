@@ -46,7 +46,7 @@ There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](ht
 
 In Brian's blog post, he was excited to take advantage of the [low price of used Intel Xeon CPUs](http://www.techspot.com/review/1155-affordable-dual-xeon-pc/). This was a neat idea, but I was afraid of the risk of hardware failure from used server hardware, so I preferred a new retail CPU.
 
-I overclock the CPU on my main PC, but this also leads to occasional crashes. I want to keep my VM server as stable as possible, so I didn't want to bother with overclocking. This happens to make choosing parts easier and less expensive because I don't need to pay a premium for an unlocked CPU, a motherboard that supports overclocking, or a premium CPU cooler.
+I overclock the CPU on my main PC, but this also leads to occasional crashes. I want to keep my VM server as stable as possible, so I didn't want to bother with overclocking. The happy consequence of this is that choosing parts easier and less expensive because I don't need to pay a premium for an unlocked CPU, a motherboard that supports overclocking, or a premium CPU cooler.
 
 I ended up going with the [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI). It's 8 cores, 16 threads, so it should be a good fit for running many VMs and it has been getting a lot of good reviews lately.
 
@@ -129,15 +129,15 @@ Because of my apartment's limited space, I wanted a server I could hide away som
 # Installing a Host OS
 The VM server's host OS should be as lightweight as possible. It needs to host a hypervisor and not much else. The more software we add to the host, the more packages we need to keep up to date to have a stable server.
 
-I tried a few different Linux distros, but Ubuntu server was the only one that worked out of the box on my hardware (successfully tested both 16.04 and 17.04) . I think [Ryzen's SMT functionality](https://www.phoronix.com/scan.php?page=news_item&px=AMD-Ryzen-Newer-Kernel) is what causes the installations to fail on other distros. I suspect I could work around this by disabling SMT in the BIOS, installing another distro, then upgrading the kernel to >= 4.10, then re-enabling SMT, but I decided to just stick with Ubuntu 16.04 server since it's the distro I'm most familiar with anyway.
+I tried a few different Linux distros, but Ubuntu server was the only one that worked out of the box on my hardware (successfully tested both 16.04 and 17.04) . I think [Ryzen's SMT functionality](https://www.phoronix.com/scan.php?page=news_item&px=AMD-Ryzen-Newer-Kernel) is what causes the installations to fail on other distros. I suspect I could work around this by disabling SMT in the BIOS, installing another distro, then upgrading the kernel to >= 4.10, then re-enabling SMT, but I decided to just stick with **Ubuntu 16.04 server** since it's the distro I'm most familiar with anyway.
 # Running Virtual Machines
 ## KVM
 
-For the hypervisor, I used [KVM](https://www.linux-kvm.org/page/Main_Page). It's a fairly mature product with wide usage, which is useful if I run into situations where I need to Google support answers. It's free and open source, so there's no dependence on an external license server like some other hypervisor software has.
+For the hypervisor, I used [KVM](https://www.linux-kvm.org/page/Main_Page). It's a fairly mature product with wide usage, which is useful if I run into situations where I need to Google support answers. Some of the more enterprise-focused hypervisors require a license key (even when the software is free), but KVM doesn't have this problem, as it's free and open source.
 
 ## Kimchi
 
-Like Brian, I enjoy being able to manage my infrastructure through a web UI, so I installed [Kimchi](https://github.com/kimchi-project/kimchi) on top of KVM.
+Like Brian, I enjoy being able to manage my infrastructure through a web UI, so I installed [Kimchi](https://github.com/kimchi-project/kimchi), KVM's management UI implemented with HTML5.
 
 I'd describe Kimchi as "okay." Some of the dashboards are pretty slick:
 
@@ -178,7 +178,7 @@ My one regret is that I didn't read the onboard video support carefully enough. 
 >Integrated AMD Radeon R7/R5 Series Graphics in A-series APU
 >Supports HDMI with max. resolution up to 4K x 2K (4096x2160) @ 24Hz / (3840x2160) @ 30Hz
 
-So I thought, "Great! It's got its own graphics card. One less thing to install." What I didn't understand was that this meant, "Supports graphics *only if* you have an AMD A-Series APU." APUs are AMD's combined CPU/GPU chips, and the Ryzen is not one of them.
+So I thought, "Great! It's got its own graphics card. One less thing to install." What I didn't understand was that this meant, "Supports graphics *only if* you have an AMD A-Series APU." APUs are AMD's combined CPU/GPU chips, and the Ryzen is not one of them, so no onboard graphics for me.
 
 If I were to do this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](http://www.dpbolvw.net/click-8329872-11892368?url=http%3A%2F%2Fwww.newegg.com%2FProduct%2FProduct.aspx%3FItem%3DN82E16813145002%26nm_mc%3DAFC-C8Junction-Components%26cm_mmc%3DAFC-C8Junction-Components-_-Motherboards%2B-%2BAMD-_-GIGABYTE-_-13145002&cjsku=N82E16813145002) just for the simplicity of having an onboard GPU.
 
@@ -188,7 +188,9 @@ If I were to do this again, I'd go with the [GIGABYTE GA-AB350M-Gaming 3](http:/
 
 ## Power Supply
 
-The power supply is sufficient and pretty quiet. It's a good value for $30. The one downside is that it's non-modular cabling and my system is so bare bones that I only need the 24-pin motherboard cable and the 8-pin CPU cable. All the rest are clutter, but they hide away pretty cleanly in my case's unused 5.25" bay for an optical disc reader.
+The power supply has sufficient wattage for the system, and it's pretty quiet. It's also a good value for $30.
+
+The one downside is that it uses non-modular cabling. My system is so bare bones that I only need the 24-pin motherboard cable and the 8-pin CPU cable. All the rest are clutter, but they hide away pretty cleanly in my case's 5.25" bay for an optical disc reader (obviously empty in my case).
 
 If I were to do it over, I'd consider a semi-modular or full-modular PSU so I could get rid of the extraneous PSU cables.
 
