@@ -32,7 +32,7 @@ in which we can run Sia with all of its dependencies.
 The components we are using in this guide are:
 
 * Synology DSM 6.0-7321 Update 7
-* Sia v.1.0.4
+* Sia v.1.2.1
 * Docker v.1.9.1
 
 Though this guide is written specifically for Docker on the Synology DSM system,
@@ -113,7 +113,7 @@ This `Dockerfile` does a few things:
 
 * Creates a Docker image from the golang base image so that the latest stable
   version of Go is available within the container.
-* Downloads Sia v.1.0.4 (the latest stable release as of this writing) and
+* Downloads Sia v.1.2.1 (the latest stable release as of this writing) and
   installs it to the `/opt/sia` directory.
 * Configures the image to run `siad`, the Sia daemon process, when the container
   starts up.
@@ -293,3 +293,7 @@ just set up.
 * 2016-05-30: Original publication.
 * 2016-07-08: Updated instructions for the Sia 1.0.0 release.
 * 2017-01-15: Updated instructions for the Sia 1.0.4 release.
+* 2017-05-07: Updated instructions for the Sia 1.2.1 release.
+
+<br>
+*Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*
