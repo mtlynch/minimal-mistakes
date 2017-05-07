@@ -166,6 +166,28 @@ vSphere didn't seem to offer a significantly better experience than Kimchi. The 
 
 The dealbreaker for me was that on login, vSphere prominently displayed a warning saying that the software would stop working in 60 days unless I entered a VMware registration key. VMware provides a license key for free, but I didn't want to bother with registration keys when Kimchi isn't tied to any kind of licensing checks and provides an experience that's about equal to vSphere.
 
+# Automating Server Provisioning
+
+I'm a big fan of Ansible, so I wrote an  [Ansible playbook]({{ base_path }}/files/provision-vm-host.yml) to automatically provision my VM server. It does the following:
+
+* Updates the kernel to a version compatible with Ryzen's SMT functionality
+* Installs KVM and Kimchi
+* Mounts an NFS share for storing VM images
+
+You can use the same playbook to provision your server by [installing Ansible](https://docs.ansible.com/ansible/intro_installation.html) and running the commands below:
+
+```bash
+VM_SERVER=vmaster # Replace with your VM server's hostname
+echo "${VM_SERVER}" > hosts
+wget {{ base_path }}/files/provision-vm-host.yml
+
+# Replace the extra-vars with the values for your NFS share
+ansible-playbook provision-vm-host.yml \
+  --extra-vars "cifs_share=/nas-hostname/VMs" \
+  --extra-vars "cifs_username=foo" \
+  --extra-vars "cifs_password=bar"
+```
+
 # Reviewing My Choices
 
 ## Review: CPU
