@@ -32,7 +32,7 @@ in which we can run Sia with all of its dependencies.
 The components we are using in this guide are:
 
 * Synology DSM 6.0-7321 Update 7
-* Sia v.1.0.4
+* Sia v.1.2.1
 * Docker v.1.9.1
 
 Though this guide is written specifically for Docker on the Synology DSM system,
@@ -106,25 +106,18 @@ Or just download my `Dockerfile` with this command:
 
 ```bash
 wget \
-  https://gist.githubusercontent.com/mtlynch/54d71bff4c33270c1cd6c0ddf0218558/raw/1c5e44f90606338d16a6398aca7f5b56a6fc3e6f/Dockerfile
+  https://gist.githubusercontent.com/mtlynch/54d71bff4c33270c1cd6c0ddf0218558/raw/f54c5108d39a897d7c4d33a6cd8b365db71e7dea/Dockerfile
 ```
 
 This `Dockerfile` does a few things:
 
 * Creates a Docker image from the golang base image so that the latest stable
   version of Go is available within the container.
-* Downloads Sia v.1.0.4 (the latest stable release as of this writing) and
+* Downloads Sia v.1.2.1 (the latest stable release as of this writing) and
   installs it to the `/opt/sia` directory.
 * Configures the image to run `siad`, the Sia daemon process, when the container
   starts up.
-* Instructs `siad` to bind to port `9980` on *all* network interfaces to listen
-  for API commands. Otherwise, `siad` would only listen to port `9980` on
-  `localhost` and we wouldn't be able to issue commands to Sia from outside of
-  our Docker container.
-  * The `--disable-api-security` tells `siad` that we have explicitly chosen to
-    listen to Sia API calls from outside of localhost, which is a security risk.
-    We handle mitigations for this risk in the subsequent steps of this guide.
-  * Frustratingly, adding `--disable-api-security` causes `siad` to require a password for all sensitive API calls, so we're setting the password to `"a"`. I've [filed a bug](https://github.com/NebulousLabs/Sia/issues/1386) on this and [written a fix](https://github.com/NebulousLabs/Sia/issues/1387) but the Sia developers seem unwilling to change this behavior.
+* Uses `socat` to forward the container's external port 8000 to the container's localhost:9980 port (the `siad` API port). Otherwise, no `siac` client outside the container would be able to execute commands against the container's `siad` server.
 * Instructs `siad` to use `/mnt/sia` as its folder for Sia state information.
   In the next step, we'll link `/mnt/sia` to the Synology Shared Folder "sia"
   that we created earlier so that the files `siad` generates are visible on the
@@ -136,18 +129,20 @@ With our `Dockerfile` complete, we are ready to build and run the container:
 
 ```bash
 # Create a Docker image tagged with the label "sia"
-admin@DiskStation:/tmp/$ sudo docker build -t sia .
+admin@DiskStation:/tmp/$ sudo docker build --tag sia .
+
+# NOTE: Replace 10.0.0.101 with the IP address of your Synology NAS on your
+# local network.
+admin@DiskStation:/tmp/$ LOCAL_IP=10.0.0.101
 
 # Create a Docker container based on our sia image and start running it in the
 # background.
-# NOTE: Replace 10.0.0.101 with the IP address of your Synology NAS on your
-# local network.
 admin@DiskStation:/tmp/$ sudo docker run \
-  -d \
-  --publish 10.0.0.101:9980:9980 \
+  --detach \
+  --publish "${LOCAL_IP}:9980:8000" \
   --publish 9981:9981 \
   --publish 9982:9982 \
-  -v /volume1/sia:/mnt/sia \
+  --volume /volume1/sia:/mnt/sia \
   --name sia-container sia
 ```
 
@@ -293,3 +288,7 @@ just set up.
 * 2016-05-30: Original publication.
 * 2016-07-08: Updated instructions for the Sia 1.0.0 release.
 * 2017-01-15: Updated instructions for the Sia 1.0.4 release.
+* 2017-05-07: Updated instructions for the Sia 1.2.1 release.
+
+<br>
+*Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*
