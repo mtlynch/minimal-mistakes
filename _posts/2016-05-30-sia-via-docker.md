@@ -31,9 +31,9 @@ in which we can run Sia with all of its dependencies.
 
 The components we are using in this guide are:
 
-* Synology DSM 6.0-7321 Update 7
+* DSM 6.1-15047 Update 2
 * Sia v.1.2.1
-* Docker v.1.9.1
+* Docker v.1.11.2
 
 Though this guide is written specifically for Docker on the Synology DSM system,
 the steps relating to Docker should be applicable on any platform that supports
@@ -231,37 +231,6 @@ something like the following
 We deliberately do **not** expose port `9980` because that is Sia's port for
 API communications. Exposing it to the public Internet would leave our Sia peer
 vulnerable to compromise.
-
-## (Optional) Persisting Sia running state across reboots
-
-While a Synology NAS can stay up for weeks to months, it is sometimes
-necessary to reboot the system. This is a pain because every time we restart the
-Sia daemon process, we need to re-enter the wallet password for Sia. Unlocking
-the wallet is currently a [slow process](https://github.com/NebulousLabs/Sia/issues/1465), as acknowledged in the [latest
-post](https://blog.sia.tech/how-to-run-a-host-on-sia-2159ebc4725) to the Sia
-development blog:
-
-> In v0.6.0, unlocking the wallet can take 10 or 20 minutes. Instant wallet
-> unlocking is on the roadmap, but will not be ready until the end of the
-> summer.
-
-Fortunately, Docker gives us additional flexibility here. We can use the Docker
-`PAUSE` and `UNPAUSE` commands to suspend Sia's operation temporarily.
-
-Before rebooting the NAS, enter the following via SSH:
-
-```bash
-admin@DiskStation:/$ sudo docker pause sia-container
-```
-
-After rebooting, we can then resume Sia with the following command:
-
-```bash
-admin@DiskStation:/$ sudo docker unpause sia-container
-```
-
-After unpausing, Sia will pick up where it left off with no need for manually
-re-entering the wallet password.
 
 # Conclusion
 
