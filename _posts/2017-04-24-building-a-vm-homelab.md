@@ -13,9 +13,9 @@ excerpt: Taking my development VMs to the next level
 
 # Overview
 
-I do the bulk of my home development work in virtual machines (VMs). My main desktop PC is a Windows 10 machine, so I had always run my VMs from within VirtualBox. This setup worked fine, but it had some rough edges so I began wondering if there was a better solution for managing VMs as a home developer.
+I do the bulk of my home development work in virtual machines (VMs). My main desktop PC is a Windows 10 machine, so I had always run my VMs from within VirtualBox.
 
-I searched around and found [a post](https://blog.brianmoses.net/2016/07/building-a-homelab-server.html) by Brian Moses where he describes building a dedicated "homelab" server for running VMs. I really liked this idea, and I was inspired to do the same.
+This setup worked fine, but I was starting to become aware of its increasing pain points. I searched around and found [a post](https://blog.brianmoses.net/2016/07/building-a-homelab-server.html) by Brian Moses where he describes building a dedicated "homelab" server for running VMs. I really liked this idea, and I was inspired to do the same.
 
 # Why VMs?
 ## Clean Environments
@@ -32,11 +32,11 @@ Malware running in a VM is much more limited in the damage it can cause. If I in
 I've been running virtual machines within my main Windows desktop with VirtualBox, but I have a few issues with it:
 
 * Any time I restart my main PC, I also have to one-by-one shut down or suspend every VM I'm running, then one-by-one start each up again after the reboot.
-* My main PC crashes about once a month and VirtualBox is really not good at recovering from crashes. On reboot, it tends to think that the VM image files are locked and I have to futz around with the filesystem to fix it.
+* My main PC crashes about once a month and VirtualBox is really bad at recovering from crashes. On reboot, it tends to think that the VM image files are locked and I have to futz around with the filesystem to fix it.
 
 With a dedicated VM server, I can run a barebones Linux server OS on it. The less software running on a machine, the less frequently it requires reboots and the less likely it is to crash.
 
-There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](https://openbazaar.org), [BitSquare](https://bitsquare.io/)), but they require running a server all the time. I've tried doing this through VirtualBox, but the hassles I mention above tend to make me lose interest in keeping these VMs running. If I could just spin up a VM once and leave it running, it makes experimenting with these projects a lot more attractive.
+There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](https://openbazaar.org), [BitSquare](https://bitsquare.io/)), but they require running a server all the time. I've tried doing this through VirtualBox, but the hassles I mention above tend to make me lose interest in keeping these VMs running. If I could just spin up a VM once and leave it running, experimenting with these projects becomes a lot more attractive.
 
 # Choosing the Parts
 
@@ -44,9 +44,9 @@ There are also some peer-to-peer projects I think are neat (e.g. [OpenBazaar](ht
 
 [![AMD Ryzen 7 1700](//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B06WP5YCX6&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=mtlynch-20){: .align-right}](https://www.amazon.com/dp/B06WP5YCX6/ref=as_li_ss_il?&linkCode=li3&tag=mtlynch-20&linkId=54dcc577d5c28eef7c3514b05b53b8be)
 
-In Brian's blog post, he was excited to take advantage of the [low price of used Intel Xeon CPUs](http://www.techspot.com/review/1155-affordable-dual-xeon-pc/). This was a neat idea, but I was afraid of the risk of hardware failure from used server hardware, so I preferred a new retail CPU.
+In Brian's blog post, he was excited to take advantage of the [low price of used Intel Xeon CPUs](http://www.techspot.com/review/1155-affordable-dual-xeon-pc/). This was a neat idea, but I was afraid of the risk of hardware failure from used server hardware, so I preferred a new, retail CPU.
 
-I overclock the CPU on my main PC, but this also leads to occasional crashes. I want to keep my VM server as stable as possible, so I didn't want to bother with overclocking. The happy consequence of this is that choosing parts easier and less expensive because I don't need to pay a premium for an unlocked CPU, a motherboard that supports overclocking, or a premium CPU cooler.
+I overclock the CPU on my main PC, but this also leads to occasional crashes. Because I want to keep my VM server as stable as possible, I decided not to overclock this system. The happy consequence of this is that choosing parts easier and less expensive because I don't need to pay a premium for an unlocked CPU, a motherboard that supports overclocking, or a premium CPU cooler.
 
 I ended up going with the [AMD Ryzen 7 1700](http://amzn.to/2o1lDVI). It's 8 cores, 16 threads, so it should be a good fit for running many VMs and it has been getting a lot of good reviews lately.
 
@@ -88,7 +88,7 @@ It didn't make sense to buy a dedicated monitor for this system because 99.99% o
 
 ## Network Adapter
 
-I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, but requires you to add a separate apt-get repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would completely fail to detect the NIC...
+I planned to just use the motherboard's onboard 1 Gbps NIC because I only have a 1 Gbps network. It did work out of the box with Ubuntu 16.04, but I soon noticed that my network speeds were limited to about 10 Mbps. After a bit of research, I discovered that Ubuntu 16.04 does not include the correct drivers, so I had to add a separate `apt-get` repo to install the `r8168-dkms` package. I did this, but on reboot, Ubuntu would completely fail to detect the NIC...
 
 At this point, I got tired of tinkering with the onboard NIC and just bought a PCI NIC that I'd read was supported out of the box on Ubuntu: [Broadcom BCM5751 Netxtreme](http://amzn.to/2pxVLjH). It got 1 Gbps speeds with zero tinkering, so for $23, I decided it wasn't worth the time to keep trying to investigate the problems with the onboard NIC.
 
@@ -119,7 +119,7 @@ These are all the components pre-assembly. The NIC and GPU are missing from this
 
 This is the server with all the parts assembled. There's not much to it because there aren't many components. It was particularly nice to not have to deal with power or SATA cables for disk drives because the only disk is the M.2 SSD connected directly to the motherboard.
 
-Because of my apartment's limited space, I wanted a server I could hide away somewhere out of sight. I decided to place it behind my desk drawers, adjacent to my desk. It's still as physically reachable as my main desktop, but it's mostly out of view from my apartment:
+Because of my apartment's limited space, I wanted a server I could hide away somewhere out of sight. I decided to place it behind my desk drawers, adjacent to my desk. It's still as physically reachable as my main desktop, but it's mostly out of view:
 
 <figure class="half">
     <a href="{{ base_path }}/images/2017-04-24-building-a-vm-homelab/vm-server-front.jpg"><img alt="Assembled server - front view" src="{{ base_path }}/images/2017-04-24-building-a-vm-homelab/vm-server-front.jpg"></a>
@@ -137,7 +137,7 @@ For the hypervisor, I used [KVM](https://www.linux-kvm.org/page/Main_Page). It's
 
 ## Kimchi
 
-Like Brian, I enjoy being able to manage my infrastructure through a web UI, so I installed [Kimchi](https://github.com/kimchi-project/kimchi), KVM's management UI implemented with HTML5.
+I enjoy being able to manage my infrastructure through a web UI, so I installed [Kimchi](https://github.com/kimchi-project/kimchi), KVM's management UI implemented with HTML5.
 
 I'd describe Kimchi as "okay." Some of the dashboards are pretty slick:
 
@@ -197,7 +197,7 @@ If I were to do it over, I'd consider a semi-modular or full-modular PSU so I co
 # Conclusion
 This homelab VM server is working out very well. It's very convenient to be able to know that my VMs are running all the time, so I can just SSH in or view them in the browser without having to spin anything up in VirtualBox.
 
-One unexpected benefit is that I no longer have to be conservative about provisioning CPU/RAM resources to guest OSes. My main desktop is an 8-core i7 with 32 GB of RAM. I didn't want my VMs to starve my main OS for resources, so I'd typically provision guest OSes with 1 CPU + 1 GB RAM and only increase when I saw it hitting resource constraints. With the homelab VM server, there are enough resources for everyone! My standard guest OS template uses 4 cores and 4 GB CPU, a sufficient upper limit for most of my environments. This means that I waste less of my time managing guest OS resources.
+One unexpected benefit is that I no longer have to be conservative about provisioning CPU/RAM resources to guest OSes. My main desktop is an 8-core i7 with 32 GB of RAM. I didn't want my VMs to starve my main OS for resources, so I'd typically provision guest OSes with 1 CPU + 1 GB RAM and only increase when I saw it hitting resource constraints. With the homelab VM server, there are enough resources for everyone! My standard guest OS template uses 4 cores and 4 GB CPU, a sufficient upper limit for most of my environments. This means that I waste less of my time managing guest OS resources manually.
 
 If you work on software projects that require a variety of development or staging environments, I highly recommend working in VMs and using a dedicated VM server machine.
 
