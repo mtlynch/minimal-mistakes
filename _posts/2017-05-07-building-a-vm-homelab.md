@@ -84,7 +84,7 @@ For the case, I was primarily looking for something very small. I plan to tuck t
 
 I'm mainly going to run this system headless and just manage it over SSH/Ansible, but I need a display occasionally (e.g. during initial install or when I accidentally break the network configuration). I initially *thought* I could use the motherboard's integrated graphics support, but I could not (see the [parts review](#review-motherboard) below).
 
-Because my requirements for the GPU were so flexible, I just wanted something inexpensive and positively reviewed, so I chose the [EVGA GeForce 8400 GS](http://amzn.to/2oVMo9u).
+Because my requirements for the GPU were so flexible, I just wanted something inexpensive and positively reviewed, so I chose the [EVGA GeForce 8400 GS](http://amzn.to/2qmwmHO).
 
 It didn't make sense to buy a dedicated monitor for this system because 99.99% of the time, I'd be managing it headless. The remaining .01% of the time, I can just crawl under my desk and move my main monitor's HDMI cable from my primary desktop to my VM server.
 
