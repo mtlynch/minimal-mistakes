@@ -11,7 +11,7 @@ tags:
 - siacoin
 - cryptocurrency
 - mining
-excerpt: Taking my development VMs to the next level
+excerpt: A step-by-step guide from zero to mining automation
 ---
 
 {% include base_path %}
@@ -394,5 +394,4 @@ If this guide was useful for you, and you'd like to support the blog, here are m
 * Siacoin: `b6e65384b896fc4b9f8a69c816422f188a418de48ec3dff2d25df7c01a16a66555cbf9d611f8`
 * Bitcoin: `12HLGffayPcBqXCC5iQHwX4f5YGjimbHT9`
 
-<br>
 *Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*
