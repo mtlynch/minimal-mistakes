@@ -62,7 +62,7 @@ Different GPUs require different software, so follow the steps below to determin
 
 1. Hit Win+R to open the run dialog.
 1. Type `devmgmt.msc` and hit Enter.<br>
-	![Run devicemgr]({{ base_path }}/images/2017-05-20-windows-sia-mining/run-window-devicemgr.png)
+  ![Run devicemgr]({{ base_path }}/images/2017-05-20-windows-sia-mining/run-window-devicemgr.png)
 1. Expand the "Display adapters" entry
 
 You should see something like the following:
@@ -72,7 +72,7 @@ You should see something like the following:
 Note whether your GPU begins with "NVIDIA" or "AMD."
 
 * If you have an **NVIDIA** GPU, you will install **CUDA**.
-* If you have an **AMD** GPU, you will install **OpenCL**. 
+* If you have an **AMD** GPU, you will install **OpenCL**.
 
 If you see something else, you likely don't have a compatible GPU. This means you won't be able to mine Siacoin, but check the [mining hardware section](#siacoin-mining-hardware) (below) to see what mining-ready GPUs are available for your next build.
 
@@ -111,40 +111,40 @@ To install Marlin, follow the steps below:
   ![Extract Marlin]({{ base_path }}/images/2017-05-20-windows-sia-mining/extract-to.png)
 1. Hit Win+R to open the Windows run dialog.
 1. Type `cmd` and hit Enter.<br>
-	![Run cmd]({{ base_path }}/images/2017-05-20-windows-sia-mining/cmd.png)
+  ![Run cmd]({{ base_path }}/images/2017-05-20-windows-sia-mining/cmd.png)
 1. In the Command Prompt, type the following:
 
     ```
     C:\marlin\marlin.exe --selftest
-		```
-		
+    ```
+
 You should see output that says `PASS` on each line:
 
-		2017/05/18 20:24:30 Starting marlin 1.0.0
-		2017/05/18 20:24:31 OpenCL error: cannot load OpenCL.dll
-		2017/05/18 20:24:31 CUDA (driver version 8.0)
-		2017/05/18 20:24:31  [0] GeForce GTX 970 (CC 5.2)
-		2017/05/18 20:24:31 [0] default   : PASS
-		2017/05/18 20:24:31 [0] m1p0      : PASS
-		2017/05/18 20:24:31 [0] m1p1      : PASS
-		2017/05/18 20:24:31 [0] m1p1x32   : PASS
-		2017/05/18 20:24:31 [0] m1p4x32   : PASS
-		2017/05/18 20:24:31 [0] m2p0      : PASS
-		2017/05/18 20:24:31 [0] m2p1      : PASS
-		2017/05/18 20:24:31 [0] m2p1x32   : PASS
-		2017/05/18 20:24:31 [0] m2p2      : PASS
-		2017/05/18 20:24:31 [0] m2p2x32   : PASS
-		2017/05/18 20:24:31 [0] m2p4      : PASS
-		2017/05/18 20:24:31 [0] m2p4x32   : PASS
-		2017/05/18 20:24:31 [0] x1p1      : PASS
-		2017/05/18 20:24:31 [0] x1p1x32   : PASS
-		2017/05/18 20:24:31 [0] x1p2x32   : PASS
-		2017/05/18 20:24:31 [0] x1p3x32   : PASS
-		2017/05/18 20:24:31 [0] x1p4x32   : PASS
-		2017/05/18 20:24:31 [0] x1p5x32   : PASS
-	
+    2017/05/18 20:24:30 Starting marlin 1.0.0
+    2017/05/18 20:24:31 OpenCL error: cannot load OpenCL.dll
+    2017/05/18 20:24:31 CUDA (driver version 8.0)
+    2017/05/18 20:24:31  [0] GeForce GTX 970 (CC 5.2)
+    2017/05/18 20:24:31 [0] default   : PASS
+    2017/05/18 20:24:31 [0] m1p0      : PASS
+    2017/05/18 20:24:31 [0] m1p1      : PASS
+    2017/05/18 20:24:31 [0] m1p1x32   : PASS
+    2017/05/18 20:24:31 [0] m1p4x32   : PASS
+    2017/05/18 20:24:31 [0] m2p0      : PASS
+    2017/05/18 20:24:31 [0] m2p1      : PASS
+    2017/05/18 20:24:31 [0] m2p1x32   : PASS
+    2017/05/18 20:24:31 [0] m2p2      : PASS
+    2017/05/18 20:24:31 [0] m2p2x32   : PASS
+    2017/05/18 20:24:31 [0] m2p4      : PASS
+    2017/05/18 20:24:31 [0] m2p4x32   : PASS
+    2017/05/18 20:24:31 [0] x1p1      : PASS
+    2017/05/18 20:24:31 [0] x1p1x32   : PASS
+    2017/05/18 20:24:31 [0] x1p2x32   : PASS
+    2017/05/18 20:24:31 [0] x1p3x32   : PASS
+    2017/05/18 20:24:31 [0] x1p4x32   : PASS
+    2017/05/18 20:24:31 [0] x1p5x32   : PASS
+
 This verifies that your GPU library is installed correctly and your miner is able to access it. All you need now is a Siacoin wallet and you'll be ready to begin mining.
-	
+
 # Generate a Siacoin wallet
 
 In order to mine, you'll need a Siacoin wallet to store the coins you earn. There are currently two main options for Siacoin wallets, which I describe below.
@@ -162,7 +162,7 @@ To create a wallet with Poloniex, follow the steps below:
 1. Go to [Poloniex](https://www.poloniex.com/).
 1. Create a new account and log in.
 1. From the upper right menu, click Balances > Deposits & Withdrawals.
-	![Poloniex balances button]({{ base_path }}/images/2017-05-20-windows-sia-mining/poloniex-balances.png)
+  ![Poloniex balances button]({{ base_path }}/images/2017-05-20-windows-sia-mining/poloniex-balances.png)
 1. Find "**SC** - Siacoin" in the list of cryptocurrencies and click the "Deposit" link on that row
 
   ![Poloniex deposit button]({{ base_path }}/images/2017-05-20-windows-sia-mining/siacoin-deposit.png)
@@ -172,7 +172,6 @@ You will see a long series of letters and numbers. This is your Siacoin wallet a
 ![Poloniex deposit address]({{ base_path }}/images/2017-05-20-windows-sia-mining/poloniex-address.png)
 
 Save this address and proceed to the [Start mining](#start-mining) step.
-
 
 ## Sia-UI - The better, but slower way
 
@@ -189,31 +188,31 @@ Sia-UI is Sia's official Windows app. Developed and maintained by the Sia develo
 1. Click "Sia-UI" in the extracted files.
   ![image]({{ base_path }}/images/2017-05-20-windows-sia-mining/explorer-sia-ui.png)
 1. A Windows Firewall dialog will appear asking if you want to give Sia access. Click "Allow".
-	![image]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-allow-access.png)
-	
+  ![image]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-allow-access.png)
+
 ### Set up Sia-UI wallet
 
 You'll see a progress bar in the upper right corner that represents Sia-UI's progress synchronizing your app with the rest of the Sia network. While you wait for synchronization to reach 100%,  create your Siacoin wallet with the steps below:
 
 1. In the lefthand sidebar, click the "Wallet" button.
-	![image]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-ui-wallet.png)
+  ![image]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-ui-wallet.png)
 1. Click "Create a new wallet."
-	![Sia-UI create wallet]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-ui-create-wallet.png)
+  ![Sia-UI create wallet]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-ui-create-wallet.png)
 1. Sia-UI then displays your wallet seed. This is a series of words that gives you access to your Siacoin wallet.
   * **Save your wallet seed**. Either write it down on paper or save it to a text file.
   * Sia offers to let you choose a wallet *password* that is distinct from your wallet *seed*. For simplicity, leave the password as is so that it will match your seed.
   * **Important**: You'll need your wallet seed to access your wallet every time you start Sia-UI. If you lose your wallet seed, you can never recover the money inside your wallet.
   * **Important**: Anyone who has your wallet seed controls your Siacoin balance. Never post your wallet seed online (unless you're writing a Siacoin mining tutorial).
 
-	![Sia-UI seed]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-seed.png)
+  ![Sia-UI seed]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-seed.png)
 1. Click the button that says "I have written these down in a safe place."
 1. Because Sia-UI maintains a healthy skepticism of its users, the next screen challenges you to enter the wallet seed you just saved. Type in the seed you saved in step 3 and click "Unlock."
-	![Sia-UI enter seed]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-unlock.png)
-	
+  ![Sia-UI enter seed]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-unlock.png)
+
 At this point, Sia-UI will likely still be synchronizing with the rest of the network. Unfortunately, you can't use your wallet until this process completes.
 
 First-time synchronization is *sloooooow*. It can take hours to days to get synchronized depending on your disk speed and network connection. I posted a [workaround on reddit](https://www.reddit.com/r/siacoin/comments/6c7fk5/complete_your_sia_firsttime_blockchain_sync_in_20/) that reduces the wait time to ~20 minutes, so check that out if you don't feel like waiting.
-	
+
 When you're finally synchronized, click the "Receive Siacoin" button in the wallet screen:
 
   ![Sia-UI receive siacoin]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-ui-receive-siacoin.png)
@@ -221,10 +220,11 @@ When you're finally synchronized, click the "Receive Siacoin" button in the wall
 You will see a long series of letters and numbers. This is your Siacoin wallet address.
 
 ![Sia-UI address]({{ base_path }}/images/2017-05-20-windows-sia-mining/sia-ui-address.png)
-	
+
 Save this address and proceed to the [Start mining](#start-mining) step.
-	
+
 # Start mining
+
 You're ready to start mining! To begin, follow the steps below:
 
 1. Open Notepad
@@ -240,7 +240,7 @@ You're ready to start mining! To begin, follow the steps below:
 
 You're mining! You should see output like the following:
 
-```
+```text
 2017/05/19 22:55:17 Starting marlin 1.0.0
 2017/05/19 22:55:18 CUDA (driver version 8.0)
 2017/05/19 22:55:18  [0] GeForce GTX 970 (CC 5.2)
@@ -306,6 +306,7 @@ When the unpaid balance for your wallet address reaches 2,000 Siacoin, the pool 
 My particular GPU reaches the payout threshold about once per week. Your experience will vary depending on the performance of your GPU, the percentage of time your miner is running, and the number of other active Siacoin miners.
 
 # Cashing out your Siacoin
+
 Now that you've accumulated some Siacoin, you probably want a way of spending them.
 
 There are cryptocurrency exchanges that allow you to sell Siacoin, but they don't support converting Siacoin directly to fiat (e.g. dollars, Euros). You need to convert your Siacoin in two stages:
@@ -356,7 +357,6 @@ GTX 980 Ti | 1,540 | [GIGABYTE GeForce GTX 980Ti](http://amzn.to/2qH6bvP)
 GTX 980 Ti Hybrid | 1,725 | [EVGA GeForce GTX 980 Ti](http://amzn.to/2rBvkbA)
 GTX 1080 FE | 2,190 | [EVGA GeForce GTX 1080 Founders Edition](http://amzn.to/2q2OKoj)
 
-
 ## AMD GPUs
 
 GPU | Performance (MH/s) | Example
@@ -387,7 +387,7 @@ Here are a few things to keep in mind as you begin Siacoin mining:
 
 Another way of earning Siacoin is by renting out your unused hard disk space. The Siacoin hosting economy hasn't  reached critical mass yet, and hosting is suited for more advanced users, but if you're interested, I wrote a [Guide to Hosting Sia on a Synology NAS]({{ base_path }}/sia-via-docker/).
 
-# Donation 
+# Donation
 
 If this guide was useful for you, and you'd like to support the blog, here are my donation addresses:
 
