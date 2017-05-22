@@ -1,6 +1,12 @@
 ---
 title: 'Adventures in Outsourcing: Cooking with TaskRabbit'
-date: 2017-01-11 00:00:00 -05:00
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+date: '2017-01-11 00:00:00 -0500'
 tags:
 - outsourcing
 - cooking
@@ -12,37 +18,57 @@ excerpt: Hiring a personal chef on the cheap
 
 # Overview
 
-For the past few years, I've been trying to outsource tasks in my daily life whenever possible. I tend to be more limited by available time than money, so if I think I can save an hour by spending $30, I'll generally do it.
+For the past few years, I've been outsourcing tasks from my daily life whenever possible. I tend to be more limited in time than money, so if paying $30 can save me an hour, I consider that a good deal.
 
-I recently started experimenting with [the keto diet](https://www.dietdoctor.com/low-carb/keto) (basically: very low carbs), which I've been enjoying. The problem is that it really limits what food delivery I can order, as BBQ, deli sandwiches, BBQ, pizza, etc. do not fit with the keto diet.
+I recently started experimenting with [the keto diet](https://www.dietdoctor.com/low-carb/keto), which focuses on low carbs. I've had good experience with the diet, but it limits what food delivery I can order, as BBQ, deli sandwiches, pizza, etc. do not fit the diet.
 
-I've found some sites that offer free keto recipes (my favorite being [ruled.me](http://ruled.me)), but I don't really like cooking. I thought this would be a good opportunity to experiment with outsourcing: I can pick the recipes and hire someone else to handle the rest.
+Fortunately, there are many sites that offer free keto recipes. My favorite is [ruled.me](http://ruled.me), but I also use a [recipe curation newletter](https://kuratedketo.com/) to find new sources. The recipes look great online, but the road from online recipes to actual meals is paved with cooking. And I don't like cooking.
 
-# Finding a TaskRabbit to Do It All
+I thought this would be a good opportunity to experiment with outsourcing &mdash; I choose the recipes and hire someone else to handle the rest.
 
-The first two recipes I picked were [Bacon Wrapped Stuffed Pork Tenderloin](http://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) and [Neapolitan Fat Bombs](http://www.ruled.me/neapolitan-fat-bombs/).
+# Enter TaskRabbit
 
-Since I was approaching this as a way to save time, I figured the way to save the *most* time would be if the TaskRabbit not only did the cooking, but the shopping as well (TaskRabbit allows workers to invoice for their expenses).
+[TaskRabbit](https://www.taskrabbit.com/r/aig0/try) is a service that allows you to hire people for small tasks. They specialize in handyman type tasks, like home repair or furniture assembly, but the range of possible tasks is pretty broad. You can hire someone to stand in line for you, run your errands, or [attend birthday parties on your behalf](http://abcnews.go.com/Lifestyle/woman-hires-impersonator-attend-friends-birthday-party/story?id=29277677).
 
-Most of the ingredients that the recipes called for were things that I didn't have in my kitchen, so it seemed like it would be simple to just say, "buy all this except for salt, olive oil, and pepper."
+[![TaskRabbit homepage]({{ base_path }}/images/2017-01-11-taskrabbit-cooking/taskrabbit-homepage.png)]({{ base_path }}/images/2017-01-11-taskrabbit-cooking/taskrabbit-homepage.png)
 
-# Not So Much...
+I've used TaskRabbit to find apartment cleaners and a handyman to wall-mount my TV. These were generally positive experiences, so TaskRabbit seemed like a good fit for outsourcing my home cooking.
 
-The first person I reached out to had 100% positive reviews and had already completed two cooking tasks. She charged $29/hr for cooking, so I offered her the job and she promptly declined. I've never had a TaskRabbit decline a job before, so I figured it was just a fluke.
+# Finding a TaskRabbit to do it all
 
-I found another that had 86% positive reviews and charged $22/hr. She messaged me to say she'd do the cooking but wasn't willing to do any shopping. Determined to find someone to handle everything, I thanked her and continued looking. The third TaskRabbit I offered the job to also declined immediately.
+Since I was approaching this as a way to save time, I figured the way to save the *most* time would be if the TaskRabbit not only did the cooking, but the shopping as well. Shopping is a common task on TaskRabbit, and the workers can invoice clients for reimbursement.
 
-# Simplifying the Job
+My trial recipes were [Bacon Wrapped Stuffed Pork Tenderloin](http://www.ruled.me/bacon-wrapped-stuffed-pork-tenderloin/) and [Neapolitan Fat Bombs](http://www.ruled.me/neapolitan-fat-bombs/). I didn't have many of the ingredients on hand, so it seemed like it would be simple to just say, "buy everything except for salt, olive oil, and pepper."
 
-At this point, I decided to simplify things. I eliminated the ingredient shopping aspect and reduced the job to strictly cooking. However, TaskRabbit doesn't allow you to re-offer the job to people who have already declined so I had inadvertently eliminated my top three picks.
+# Not so much...
 
-The best remaining option was a woman named Leah with a 73% positive rating (pretty bad by TaskRabbit standards) and only one cooking review, which was negative (no explanation given). But she charged $26/hr, which is relatively inexpensive, and I was willing to take a gamble that I'm probably a much easier food critic than most people that would hire and review a TaskRabbit chef. Leah accepted the job and within a few minutes, we had scheduled an appointment for two days later.
+The first person I reached out to charged $29/hr for cooking and had 100% positive reviews, including two cooking tasks. I offered her the job, and she promptly declined. This was strange. I'd never had a TaskRabbit reject a job before.
 
-## The First Meal
+I found another that charged $22/hr with 86% positive reviews. She messaged me to say she'd do the cooking but wasn't willing to do any shopping. Determined to find someone to handle everything, I thanked her and continued looking.
 
-Leah showed up right on time the evening she was scheduled. I showed her my kitchen and handed her the printed recipes and she was off to work.
+Finally, I found a third qualified canddiate, who enthusiastically... declined.
 
-The process went very smoothly. She did her thing for a little over two hours. I took advantage of the extra free time she was giving me and worked on [ProsperBot]({{ base_path }}/prosperbot/). It's always kind of awkward having a stranger in my house with me, but my kitchen is isolated enough from the rest of my apartment that we both had a decent amount of privacy. At times, I briefly forgot she was there.
+# Simplifying the job
+
+I had to simplify things.
+
+The TaskRabbit workers seemed to dislike the idea of the combined shopping and cooking job. I eliminated the shopping aspect and reduced the job to strictly cooking.
+
+My new problem was that TaskRabbit doesn't allow you to re-offer the job to people who have already turned it down, so I had inadvertently eliminated my top three candidates.
+
+# Finally finding a match
+
+The best remaining option was a young woman named Leah. She charged $26/hr with a 73% rating, which is a worryingly low score by TaskRabbit standards. She only had one cooking review, which was a thumbs-down with no explanation from the reviewer.
+
+Leah seemed like a risky bet, but I had an ace up my sleeve: I don't care that much about food. Or rather, I don't have very discriminating taste in food. My standards for a satisfying meal are probably  much more lenient than those of the majority of people that would hire and review a TaskRabbit chef.
+
+I offered Leah the job, and she accepted. Within a few minutes, we had scheduled an appointment for two days later.
+
+## The first meal
+
+Leah showed up right on time the evening she was scheduled. I showed her my kitchen, handed her the printed recipes, and she was off to work.
+
+The process went very smoothly. She cooked for a little over two hours. I took advantage of the extra free time she afforded me and worked on [my current software project]({{ base_path }}/prosperbot/). It's awkward having a stranger in my house , but the kitchen is isolated enough from the rest of the apartment that we both had a decent amount of privacy. At times, I forgot she was there.
 
 When she was done, she told me I could take the pork tenderloin out of the oven in ten minutes, the pepper and broccoli were finished on the stove, and that the neapolitan fat bombs were in the freezer. She had wiped down my countertops and cleaned my dishes. When the tenderloin was ready, I took it out and was delighted. It looked great and tasted fantastic.
 
@@ -52,21 +78,23 @@ When she was done, she told me I could take the pork tenderloin out of the oven 
     <figcaption>Bacon Wrapped Stuffed Pork Tenderloin: finished product.</figcaption>
 </figure>
 
-The experience went pretty much exactly as I had wanted it to. I've hired Leah to cook three more times since then and I've been very pleased with the results every time.
+The experience went pretty much exactly as I had wanted it to. I've hired Leah to cook three more times since then, and I've been pleased with the results every time.
 
 # How much does it cost?
 
-When I tell people I'm doing this, the first thing they want to know is: how much does it cost? Until I sat down to write this post, I wasn't really sure. The cost for hiring a TaskRabbit is easy because I get a bill at the end of each session. It's much harder to calculate the cost of ingredients: I don't buy all the ingredients for a meal at the same time, and I can't buy the exact amount of an ingredient that the recipe calls for.
+When I tell people I'm doing this, the first thing they ask is, "How much does it cost?" Until I sat down to write this post, I wasn't sure.
 
-## Costing Methodology
+It's easy to calculate the cost of hiring a TaskRabbit because I get a bill at the end of each session. It's much harder to determine the cost of ingredients. I don't buy all the ingredients for a meal at the same time, and I can't buy the exact amount of each ingredient that a recipe calls for.
 
-The most straightforward way I could think of for accounting for costs was to amortize by the amount that the recipe calls for. For example, if a recipe calls for 3 oz. of cream cheese and I buy an 8 oz. package for $3.49, I consider the amortized cost of that ingredient to be $1.31 (&#8540; * $3.49).
+## Figuring out ingredient costs
 
-This is a very conservative estimate because a lot of recipes call for ingredients that spoil, so I end up having to throw some ingredients away if I can't use them in other meals. There are also ingredients that don't spoil quickly, but will be difficult to get through, like powdered Ranch dressing. The smallest amount I could buy cost $14.03 for a 16 oz. container, when the recipe only called for 2 tsp ($0.29 worth). It has a shelf life of about 5 months, but it's going to be tough finding more recipes that call for powdered Ranch dressing. Overall, I probably lose about $3-6 per cooking session to suboptimal ingredient purchasing.
+The most straightforward way to account for ingredient costs is to amortize by the amount that the recipe requires. For example, if a recipe calls for 3 oz of cream cheese, and an 8 oz package costs $3.49, the amortized cost of that ingredient is $1.31 (&#8540; * $3.49).
 
-## Raw Numbers
+This is a very conservative estimate because many of my of recipes call for ingredients that spoil, so I end up having to throw ingredients away when I can't use them in other meals. There are also ingredients that don't spoil quickly, but will be difficult to use completely, like powdered Ranch dressing. The smallest amount I could buy was $14.03 for a 16 oz container, but the recipe only called for 2 tsp, or $0.29 worth. It has a shelf life of about 5 months, but it's going to be tough finding more recipes that call for powdered Ranch dressing. Overall, I probably lose about $3-6 per cooking session to suboptimal ingredient purchasing.
 
-Here are the raw numbers for my costs. I bought all the ingredients through FreshDirect and Amazon. The labor costs include the TaskRabbit's hourly rate and all taxes and fees.
+## By the numbers
+
+The tables below show my full costs for each cooking session. I bought all the ingredients from Amazon and a grocery delivery service called FreshDirect. The labor costs include the TaskRabbit's hourly rate and all taxes and fees.
 
 ### Session 1
 
@@ -110,47 +138,68 @@ Here are the raw numbers for my costs. I bought all the ingredients through Fres
 
 [<img alt="ProsperBot screenshot" src="{{ base_path }}/images/2017-01-11-taskrabbit-cooking/cooking-costs.png" width="750" style="border:1px solid grey; display: block; margin-left: auto; margin-right: auto;" />]({{ base_path }}/images/2017-01-11-taskrabbit-cooking/cooking-costs.png)
 
-## Price Analysis
+## How does this compare to restaurant delivery?
 
-I didn't realize until I calculated everything out that I spent almost exactly the same amount (to within $2) each time (except for Session 3, when I asked Leah to prepare an extra dessert). Looking at the totals, I feel like it's a pretty good deal. If we look at Session 4, for example, I'm paying the equivalent of $20 for each entree and $2.50 for each cheesecake cupcake (which were amazing). Although that cost assumes optimal use of ingredients, so we'd maybe add $1-2 to the cost of each meal to get closer to reality.
+TaskRabbit cooking has taken the place of restaurant delivery for me. I still cook some of my own meals, like scrambled eggs or steak, but I’ve stopped ordering from restaurants almost entirely.
 
-I still cook some of my meals like scrambled eggs or steak, but I've stopped ordering from [Seamless](https://seamless.extole.com/s/nvhmp). If we think of TaskRabbit cooking as a replacement for Seamless, I'm about even with my previous spending, because I tend to spend about $10-20 on lunches through Seamless and my dinners tend to be $15-30 (including tax, tip, and fees).
+### Cost: Tie
 
-# Conclusion
+In my case, the cost for TaskRabbit home cooking is roughly equal to the cost of ordering delivery.
 
-This experience made me realize that I find cooking very exciting when I don't have to do it. I have a lot of friends who can get excited about reading recipes and I've never been able to relate to that; I just think about how all the work of cooking it isn't really worth the effort for me. But now that I've separated the work of cooking from picking a recipe, I find it really fun. I'll scroll through recipes and think, "Wow, I can't wait to schedule Leah so I can eat that!"
+In Session 4, for example, the cost works out to around $20 for each entr&eacute;e and $2.50 for each dessert (the [cheesecake cupcakes](http://www.ruled.me/raspberry-cheesecake-cupcakes/) were *amazing*, by the way). That cost assumes optimal use of ingredients, so in practice, it's probably $1-2 higher per meal.
 
-I suspect that I could refine this process further. I end up spending a lot of time searching for good recipes and managing the ingredients, so I'm considering other solutions. A friend suggested I'm probably paying a rate close to what hourly chefs charge, so I'm thinking about whether it's feasible to use a private chef for this (outside of TaskRabbit) who either brings their own ingredients to me or cooks at their own place and delivers to me.
+With restaurant delivery, I tend to spend around $10-20 on lunches and $15-30 on dinners, including tax, tip, and fees. Overall, I'd say it's a wash between the two.
 
-# Tips for Hiring TaskRabbit Chefs
+### Time management: TaskRabbit wins
+
+When I order food from a restaurant, it arrives anywhere from 20 to 90 minutes later. It's difficult for me to be productive in the meantime because I can't fully focus when I know an interruption is coming.
+
+With a TaskRabbit chef, I get several meals that I can freeze for the week. When I want these meals later, I can just eat them as soon as I'm hungry. This eliminates unpredictable interruptions and gives me much better control of my time.
+
+### Nutritional choices: TaskRabbit wins
+
+As discussed in the introduction, there are not many restaurant delivery options that match my preferred diet. Even among restaurants that have options that *seem* low carb, it's rare for the restaurant to provide exact nutritional information. With TaskRabbit cooking, I know exactly what's in my food, which allows me to make more informed choices about what I eat.
+
+# What I learned
+
+This experience made me realize that I find cooking very exciting when I don't have to do it.
+
+I have friends who become enhtusiastic just from reading recipes, and I've never been able to relate to that. I just think about how all the work of cooking isn't worth the effort for me. But now that I've separated choosing a recipe from the effort of cooking, I find it really fun. I'll scroll through recipes and think, "Wow, I can't wait to schedule Leah so I can eat that!"
+
+# What's next?
+
+One shortcoming of this arrangement is that I burn a lot of time searching for good recipes and managing the ingredients. A friend suggested that I'm probably paying a rate close to what hourly chefs charge, so I'm investigating whether it's feasible to hire a private chef outside of TaskRabbit who either brings their own ingredients to me or cooks in their own kitchen and delivers to me.
+
+# Tips for hiring TaskRabbit chefs
 
 ## Buy your own ingredients
 
-In my experience, asking the TaskRabbit to both cook and shop limits those who will be interested in the job and introduces a lot more complexity into the task (you have to communicate what to buy, how much is okay to spend, then reimburse, then reconcile their shopping rate with their cooking rate).
+In my experience, asking the TaskRabbit to both cook and shop limits the workers who will be interested in the job and introduces too much complexity into the task. You'd have to communicate what to buy, how much is okay to spend, reimburse them, and figure out fair pay if the rate they charge for shopping tasks differs from their cooking rate.
+
+## Prep the kitchen
+
+I make sure to have everything prepared to go by the time my TaskRabbit arrives. Recipes are printed, counters are clear, ingredients are ready.
+
+One thing I find easy to forget is clearing space in my fridge or freezer for recipes that need to be chilled or frozen. Leah has kindly rearranged my refrigerator space for me when I've forgotten, but I'd rather let her focus on cooking.
+
+## Give a tour
+
+After the first session, I found that some of the kitchen tools I expected Leah to need (e.g. measuring spoons, spatula) were unused. I realized that she probably didn't notice that I had them and decided to make do without.
+
+After that, I organized my kitchen so that all of my cooking tools were in more obvious places. The next time Leah came to cook, I walked her through what I had available and showed her where to find everything.
+
+## Check in after to solicit feedback
+
+Related to the above, I realized that Leah was probably uncomfortable telling me that I was missing kitchen equipment that she needed. If I wanted to find out about problems, I'd need to ask her. Aside from that, she's in my home working for me, so I wanted to make sure I was treating her with respect and fostering a good work environment.
+
+After the first session, I reached out to Leah to ask if there were any changes I could make to the process or to my kitchen setup to improve the work experience for her. Interestingly, she brought up my [Magic Bullet](http://amzn.to/2q7Azyh), a small blender I use for its ease of cleaning.  She told me that it works great for liquids, but not so well for mixing dry ingredients. She recommended an immersion blender, so I ordered [a basic one](http://amzn.to/2q0aCou) from Amazon for $50. Easy peasy.
+
+I've made this feedback check a regular practice, and it continues to bring forth useful suggestions from Leah. Many of her recommendations have come in handy even when I'm just cooking for myself.
 
 ## Don't add a tip
 
 This one's not so much a recommendation, just what I choose to do.
 
-TaskRabbit allows you to add tip, but from what I've read online, adding a tip is not the norm. I think [tipping culture is net negative](https://www.youtube.com/watch?v=q_vivC7c_1k), so I don't tip for things unless it's a strongly implied part of the cost (e.g. restaurants, taxis). Each TaskRabbit worker chooses their own rate for the services they offer, so it doesn't really make sense to add a tip on top of that.
+TaskRabbit allows you to add tip, but from what I've read online, adding a tip is not the norm. I think [tipping culture is net negative](https://www.youtube.com/watch?v=q_vivC7c_1k), so I don't tip for things unless it's a strongly implied part of the cost, such as restaurants or taxis. Each TaskRabbit worker chooses their own rate for the services they offer, so it doesn't make sense to add a tip on top of that.
 
-## Have everything ready
-
-I make sure to have everything prepared to go by the time my TaskRabbit arrives. Recipes are printed, counters are clear, ingredients are ready.
-
-One thing I find easy to forget is clearing space in my fridge or freezer for recipes that need to be chilled or frozen. Leah has kindly rearranged my fridge space for me when I've forgotten, but I'd rather let her focus on the cooking.
-
-## On the first visit, give a tour of your kitchen
-
-After the first session, I found that some of the kitchen tools I expected Leah to need (e.g. measuring spoons, spatula) had gone unused. I realized that she probably didn't notice I had them and decided to make do without.
-
-After that, I reorganized my kitchen so that all of my cooking tools were in more obvious places. The next time Leah came to cook, I made sure to briefly walk her through what I had available and where it was.
-
-## Check in after to solicit feedback
-
-As a corrolary to the above, I realized that Leah was probably uncomfortable telling me that I was missing kitchen equipment that she needed, so if I wanted to find out, I'd need to ask her. Aside from that, she's in my home working for me, so I want to make sure I'm treating her with respect, so it's useful for me to find out about things like missing equipment or deficiencies in the process.
-
-After the first session, I reached out to Leah to ask if there were any changes I could make to the process or my kitchen setup to make the experience better for her. I had asked her to use my [Magic Bullet](http://a.co/fbcdbB5) to blend ingredients, but Leah told me that it works great for liquids, but not so well for mixing dry ingredients. She recommended an immersion blender, so I ordered [a simple one](http://a.co/adS0PQm) from Amazon for $50. Easy peasy.
-
-I've made this a regular practice, and I've gotten some good feedback from Leah from it. Many of her recommendations have come in handy even when she's not here and I'm cooking for myself.
-
+*Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*
