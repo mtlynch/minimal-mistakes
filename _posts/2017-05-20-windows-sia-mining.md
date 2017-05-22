@@ -223,6 +223,8 @@ You will see a long series of letters and numbers. This is your Siacoin wallet a
 
 Save this address and proceed to the [Start mining](#start-mining) step.
 
+*Note*: Every time you click the "Receive Siacoin" button, Sia will generate a new wallet address for you. This is normal. You will still receive payments sent to any of your previously generated addresses. If you want to see a full list of your wallet addresses, go to the "Terminal" view and type `wallet addresses`.
+
 # Start mining
 
 You're ready to start mining! To begin, follow the steps below:
