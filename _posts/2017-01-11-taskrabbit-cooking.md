@@ -22,7 +22,7 @@ For the past few years, I've been outsourcing tasks from my daily life whenever 
 
 I recently started experimenting with [the keto diet](https://www.dietdoctor.com/low-carb/keto), which focuses on low carbs. I've had good experience with the diet, but it limits what food delivery I can order, as BBQ, deli sandwiches, pizza, etc. do not fit the diet.
 
-Fortunately, there are many sites that offer free keto recipes. My favorite is [ruled.me](http://ruled.me), but I also use a [recipe curation newletter](https://kuratedketo.com/) to find new sites. The recipes look great online, but the road from online recipes to actual meals is paved with cooking. And I don't like cooking.
+Fortunately, there are many sites that offer free keto recipes. My favorite is [ruled.me](http://ruled.me), but I also use a [recipe curation newletter](https://kuratedketo.com/) to find new sources. The recipes look great online, but the road from online recipes to actual meals is paved with cooking. And I don't like cooking.
 
 I thought this would be a good opportunity to experiment with outsourcing &mdash; I choose the recipes and hire someone else to handle the rest.
 
@@ -88,7 +88,7 @@ It's easy to calculate the cost of hiring a TaskRabbit because I get a bill at t
 
 ## Figuring out ingredient costs
 
-The most straightforward way to account for ingredient costs is to amortize by the amount that each recipe calls for. For example, if a recipe calls for 3 oz of cream cheese, and an 8 oz package costs $3.49, the amortized cost of that ingredient is $1.31 (&#8540; * $3.49).
+The most straightforward way to account for ingredient costs is to amortize by the amount that the recipe requires. For example, if a recipe calls for 3 oz of cream cheese, and an 8 oz package costs $3.49, the amortized cost of that ingredient is $1.31 (&#8540; * $3.49).
 
 This is a very conservative estimate because many of my of recipes call for ingredients that spoil, so I end up having to throw ingredients away when I can't use them in other meals. There are also ingredients that don't spoil quickly, but will be difficult to use completely, like powdered Ranch dressing. The smallest amount I could buy was $14.03 for a 16 oz container, but the recipe only called for 2 tsp, or $0.29 worth. It has a shelf life of about 5 months, but it's going to be tough finding more recipes that call for powdered Ranch dressing. Overall, I probably lose about $3-6 per cooking session to suboptimal ingredient purchasing.
 
@@ -164,11 +164,11 @@ As discussed in the introduction, there are not many restaurant delivery options
 
 This experience made me realize that I find cooking very exciting when I don't have to do it.
 
-I have friends who become enhtusiastic just from reading recipes, and I've never been able to relate to that. I just think about how all the work of cooking it isn't worth the effort for me. But now that I've separated choosing a recipe from the effort of cooking, I find it really fun. I'll scroll through recipes and think, "Wow, I can't wait to schedule Leah so I can eat that!"
+I have friends who become enhtusiastic just from reading recipes, and I've never been able to relate to that. I just think about how all the work of cooking isn't worth the effort for me. But now that I've separated choosing a recipe from the effort of cooking, I find it really fun. I'll scroll through recipes and think, "Wow, I can't wait to schedule Leah so I can eat that!"
 
 # What's next?
 
-One shortcoming of this arrangement is that I burn a lot of time searching for good recipes and managing the ingredients. A friend suggested that I'm probably paying a rate close to what hourly chefs charge, so I'm investigating whether it's feasible to hire a private chef outside of TaskRabbit who either brings their own ingredients to me or cooks at their own place and delivers to me.
+One shortcoming of this arrangement is that I burn a lot of time searching for good recipes and managing the ingredients. A friend suggested that I'm probably paying a rate close to what hourly chefs charge, so I'm investigating whether it's feasible to hire a private chef outside of TaskRabbit who either brings their own ingredients to me or cooks in their own kitchen and delivers to me.
 
 # Tips for hiring TaskRabbit chefs
 
@@ -180,7 +180,7 @@ In my experience, asking the TaskRabbit to both cook and shop limits the workers
 
 I make sure to have everything prepared to go by the time my TaskRabbit arrives. Recipes are printed, counters are clear, ingredients are ready.
 
-One thing I find easy to forget is clearing space in my fridge or freezer for recipes that need to be chilled or frozen. Leah has kindly rearranged my fridge space for me when I've forgotten, but I'd rather let her focus on cooking.
+One thing I find easy to forget is clearing space in my fridge or freezer for recipes that need to be chilled or frozen. Leah has kindly rearranged my refrigerator space for me when I've forgotten, but I'd rather let her focus on cooking.
 
 ## Give a tour
 
@@ -194,7 +194,7 @@ Related to the above, I realized that Leah was probably uncomfortable telling me
 
 After the first session, I reached out to Leah to ask if there were any changes I could make to the process or to my kitchen setup to improve the work experience for her. Interestingly, she brought up my [Magic Bullet](http://amzn.to/2q7Azyh), a small blender I use for its ease of cleaning.  She told me that it works great for liquids, but not so well for mixing dry ingredients. She recommended an immersion blender, so I ordered [a basic one](http://amzn.to/2q0aCou) from Amazon for $50. Easy peasy.
 
-I've made this a regular practice, and it continues to bring forth useful feedback from Leah. Many of her recommendations have come in handy even when I'm just cooking for myself.
+I've made this feedback check a regular practice, and it continues to bring forth useful suggestions from Leah. Many of her recommendations have come in handy even when I'm just cooking for myself.
 
 ## Don't add a tip
 
