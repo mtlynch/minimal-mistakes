@@ -1,6 +1,12 @@
 ---
 title: Running Sia on a Synology NAS via Docker
-date: 2016-05-30 00:00:00 -04:00
+layout: single
+author_profile: true
+read_time: true
+comments: true
+share: true
+related: true
+date: '2016-05-30 00:00:00 -0400'
 tags:
 - docker
 - sia
@@ -31,8 +37,8 @@ in which we can run Sia with all of its dependencies.
 
 The components we are using in this guide are:
 
-* DSM 6.1-15047 Update 2
-* Sia v.1.2.1
+* DSM 6.1.1-15101 Update 2
+* Sia v.1.2.2
 * Docker v.1.11.2
 
 Though this guide is written specifically for Docker on the Synology DSM system,
@@ -56,7 +62,7 @@ DSM. You can find it in Package Center by searching for `docker` and clicking
 
 ![Install Docker package]({{ base_path }}/images/2016-05-30-sia-via-docker/package-docker.png)
 
-## Create Sia Directory
+## Create Sia directory
 
 Next, we'll create a dedicated Shared Folder for Sia. This is the folder where
 Sia will store all of its state information (including encrypted wallet files
@@ -66,7 +72,7 @@ From File Station, create a New Shared folder and name it "sia":
 
 ![Create new shared folder]({{ base_path }}/images/2016-05-30-sia-via-docker/new-shared-folder.png)
 
-## Enable SSH access to Diskstation
+## Enable SSH access to DiskStation
 
 Because the DSM Docker app does not support creation of images from a
 `Dockerfile`, we'll need to do this through the command line. To support this,
@@ -106,14 +112,14 @@ Or just download my `Dockerfile` with this command:
 
 ```bash
 wget \
-  https://gist.githubusercontent.com/mtlynch/54d71bff4c33270c1cd6c0ddf0218558/raw/f54c5108d39a897d7c4d33a6cd8b365db71e7dea/Dockerfile
+  https://gist.githubusercontent.com/mtlynch/54d71bff4c33270c1cd6c0ddf0218558/raw/e78fd0a42b76c71a30cde8eef9aa3c19fa9ae12a/Dockerfile
 ```
 
 This `Dockerfile` does a few things:
 
 * Creates a Docker image from the golang base image so that the latest stable
   version of Go is available within the container.
-* Downloads Sia v.1.2.1 (the latest stable release as of this writing) and
+* Downloads Sia v.1.2.2 (the latest stable release as of this writing) and
   installs it to the `/opt/sia` directory.
 * Configures the image to run `siad`, the Sia daemon process, when the container
   starts up.
@@ -244,13 +250,8 @@ releases are published.
 
 # Further Reading
 
-The official Sia blog just published a post about setting up Sia to be a storage
-host:
-
-* [How to Run a Host on Sia](https://blog.sia.tech/how-to-run-a-host-on-sia-2159ebc4725)
-
-Check that guide out for an in-depth walkthrough of configuring the Sia host we
-just set up.
+* [How to Run a Host on Sia](https://blog.sia.tech/how-to-run-a-host-on-sia-2159ebc4725): An in-depth walkthrough of configuring a Sia host.
+* [Host Profit Maximization Thread](https://forum.sia.tech/topic/1037/host-profit-maximization-thread): A guide to tweaking host settings to maximize profits.
 
 # Updates
 
@@ -258,6 +259,7 @@ just set up.
 * 2016-07-08: Updated instructions for the Sia 1.0.0 release.
 * 2017-01-15: Updated instructions for the Sia 1.0.4 release.
 * 2017-05-07: Updated instructions for the Sia 1.2.1 release.
+* 2017-05-23: Updated instructions for the Sia 1.2.2 release.
 
 <br>
 *Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*
