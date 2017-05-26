@@ -29,7 +29,7 @@ In this guide, I'll show you how to generate money when you're not using your Wi
 
 If  your PC supports high-end gaming or graphic design, your graphics card may have the potential to generate extra income through Siacoin mining.
 
-Even if you don't have top of the line graphics hardware, you still may be able to earn a significant amount of money mining Siacoin. I mine with an [NVIDIA GTX 970](http://amzn.to/2r1RPJw), which was released almost three years ago. It generates ~2,000 Siacoin per week. At current Siacoin prices ($6.72 USD per thousand Siacoin), this is equivalent to a weekly revenue of ~$13 USD. This is not bad, considering I don't need to put in any work after the initial setup.
+Even if you don't have top of the line graphics hardware, you still may be able to earn a significant amount of money mining Siacoin. I mine with an [NVIDIA GTX 970](http://amzn.to/2r1RPJw), which was released almost three years ago. It generates ~2,000 Siacoin per week. At current Siacoin prices ($6.72 USD per thousand Siacoin), this is equivalent to a weekly revenue of ~$13 USD. This is not bad, considering I don't need to put in any work after the initial setup. You can estimate your own profit from mining by using the [minings earning calculator](http://siapulse.com/page/tools) on SiaPulse.
 
 If you're not looking for extra income, maybe you're interested in playing with cryptocurrency. Siacoin mining provides an easy, low-risk way to get your feet wet.
 
@@ -303,7 +303,7 @@ The SiaMining pool provides a dashboard that allows you to monitor your miner's 
 
 [![SiaMining screenshot]({{ base_path }}/images/2017-05-20-windows-sia-mining/siamining-pool.png)]({{ base_path }}/images/2017-05-20-windows-sia-mining/siamining-pool.png)
 
-When the unpaid balance for your wallet address reaches 2,000 Siacoin, the pool pays out your rewards. Within six hours, you will see a deposit in your wallet for a little over 2,000 Siacoin.
+When the unpaid balance for your wallet address reaches 1,000 Siacoin, the pool pays out your rewards. Within six hours, you will see a deposit in your wallet for a little over 1,000 Siacoin.
 
 My particular GPU reaches the payout threshold about once per week. Your experience will vary depending on the performance of your GPU, the percentage of time your miner is running, and the number of other active Siacoin miners.
 
