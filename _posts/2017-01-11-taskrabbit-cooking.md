@@ -202,4 +202,3 @@ This one's not so much a recommendation, just what I choose to do.
 
 TaskRabbit allows you to add tip, but from what I've read online, adding a tip is not the norm. I think [tipping culture is net negative](https://www.youtube.com/watch?v=q_vivC7c_1k), so I don't tip for things unless it's a strongly implied part of the cost, such as restaurants or taxis. Each TaskRabbit worker chooses their own rate for the services they offer, so it doesn't make sense to add a tip on top of that.
 
-*Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*

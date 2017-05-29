@@ -4,3 +4,7 @@ analytics:
   provider: google-universal
   google:
     tracking_id:
+comments:
+  provider: disqus
+  disqus:
+    shortname:

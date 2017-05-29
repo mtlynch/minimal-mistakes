@@ -231,5 +231,3 @@ One unexpected benefit is that I no longer have to be conservative about provisi
 
 If you work on software projects that require a variety of development or staging environments, I highly recommend working in VMs and using a dedicated VM server machine.
 
-<br>
-*Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*
