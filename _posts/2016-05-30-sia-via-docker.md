@@ -221,16 +221,21 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
 
 1. From any machine on your network, gracefully shut down your `siad` server:
 
+    ```bash
     ./siac --addr DISKSTATION:9980 stop
+    ```
 
 1. Get the version number of the [latest Sia release](https://github.com/NebulousLabs/Sia/releases/latest)
 1. SSH into your NAS as `admin`.
 
+    ```bash
     ssh admin@diskstation
+    ```
 
 1. Edit your `Dockerfile` to change the `SIA_VERSION` variable to match the latest Sia version.
 1. Run the following commands:
 
+    ```bash
     # Rebuild the Docker image
     admin@DiskStation:/tmp/$ sudo docker build --tag sia .
 
@@ -252,6 +257,7 @@ If you've followed this guide, all of Sia's state is kept outside the Docker con
       --publish 9982:9982 \
       --volume /volume1/sia:/mnt/sia \
       --name sia-container sia
+    ```
 
 When you complete this process, you'll have a new Sia Docker container running the latest version of Sia.
 
@@ -283,5 +289,3 @@ If you're interested in getting started, check out my other guide, "[A Beginnerâ
 * 2017-05-23: Updated instructions for the Sia 1.2.2 release.
 * 2017-05-25: Revised a lot of the text, added instructions for version-to-version upgrades.
 
-<br>
-*Disclosure: Some of the links to particular products in this post use affiliate tags. This allows the blog to receive a commission when readers make purchases through these links.*

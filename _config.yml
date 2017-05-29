@@ -29,7 +29,8 @@ locale: en-US
 title_separator: "-"
 name: Michael Lynch
 description: An amazing website.
-url: http://mtlynch.io
+url: https://mtlynch.io
+theme: minimal-mistakes-jekyll
 baseurl: 
 repository: 
 teaser: 
@@ -90,7 +91,7 @@ analytics:
     tracking_id: UA-78473158-1
 author:
   name: Michael Lynch
-  avatar: bio-photo.jpg
+  avatar: images/bio-photo.jpg
   bio: By day, a simple software engineer. By night, also a software engineer.
   location: New York, NY
   email: 
